@@ -6,6 +6,11 @@ body {
     margin: 0;
 }
 
+.nav-container {
+    margin: 1rem;
+    text-align: center;
+}
+
 .nav {
     background-color: beige;
     color: purple;
