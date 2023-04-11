@@ -19,11 +19,13 @@ export default function Offices({ offices }) {
 
   return (
     <div>
-      <header>Offices</header>
       {offices && offices.map((offices, id) => (
         <div key={id}>
-          <div>
+          <div className="office-container">
+            <img className="office-image" src={offices.photo_url} />
             <h2>{offices.name}</h2>
+            <h3>{offices.location}</h3>
+            <h4>{offices.number}</h4>
           </div>
         </div>
       ))}

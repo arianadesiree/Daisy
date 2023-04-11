@@ -53,3 +53,15 @@ body {
     align-items: center;
     padding: .25rem;
 }
+
+.office-image {
+    height: 200px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.doctor-image {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
