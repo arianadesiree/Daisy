@@ -7,6 +7,27 @@ body {
     background-color: lavender;
 }
 
+.search-container {
+    padding-top: 300px;
+}
+
+.search-bar{
+    width:900px;
+    height:50px;
+    border: bold;
+    outline:none;
+    border-radius: 80px;
+    padding: 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbtn {
+    height: 30px;
+    width: 70px;
+    justify-content: center;
+}
+
 .nav-container {
     margin: 1rem;
     text-align: center;
