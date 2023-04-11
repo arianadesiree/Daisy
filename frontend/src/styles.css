@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    background-color: lavender;
 }
 
 .nav-container {
@@ -13,7 +14,7 @@ body {
 
 .nav {
     background-color: beige;
-    color: purple;
+    color: rgb(172, 124, 172);
     display: flex;
     justify-content: space-between;
     align-items: center;
