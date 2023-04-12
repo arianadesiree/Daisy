@@ -4,11 +4,27 @@
 
 body {
     margin: 0;
-    background-color: lavender;
+    background-color: #ad3171;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    height: 330px;
+    width: 400px;
+}
+
+.quote {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 33%;
 }
 
 .search-container {
-    padding-top: 300px;
+    padding-top: 50px;
 }
 
 .search-bar{
@@ -17,7 +33,7 @@ body {
     border: bold;
     outline:none;
     border-radius: 80px;
-    padding: 1rem 1rem;
+    /* padding: 1rem 1rem; */
     justify-content: center;
     align-items: center;
 }
@@ -34,8 +50,8 @@ body {
 }
 
 .nav {
-    background-color: beige;
-    color: rgb(172, 124, 172);
+    background-color: rgb(152, 152, 152);
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,8 +61,8 @@ body {
 }
 
 .nav li:hover {
-    background-color: purple;
-    color: white;
+    background-color: white;
+    color: #ad3171;
 }
 
 .home-link {
@@ -54,8 +70,8 @@ body {
 }
 
 .home-link:hover {
-    background-color: purple;
-    color: white;
+    background-color: white;
+    color: #ad3171;
 }
 
 .nav ul {

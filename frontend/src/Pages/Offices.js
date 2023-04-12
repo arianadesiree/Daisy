@@ -1,27 +1,33 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import React from "react"
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import DoctorsPage from "./DoctorsPage";
+import {Route, Routes} from 'react-router-dom'
 
 export default function Offices({ offices }) {
 
-  const [displayOutput, setDisplayOutput] = useState([]);
+  const [ doctors, setDoctors ] = useState(null)
+  let navigate = useNavigate();
 
-
-  useEffect(() => {
-    axios
-      .get("https://localhost:8000/offices/")
-      .then((response) => {
-        displayOutput(response);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
+  const showOffices = (id) => {
+    navigate(`${id}`);
+  };
 
   return (
     <div>
+      <Routes>
+      <Route path="/doctors" element={<DoctorsPage
+      offices={offices}
+      doctors={doctors}/>} />
+      </Routes>
+
       {offices && offices.map((offices, id) => (
         <div key={id}>
-          <div className="office-container">
+          <div onClick={() => {
+              showOffices(id);
+            }}
+            className="office-container">
             <img className="office-image" src={offices.photo_url} />
             <h2>{offices.name}</h2>
             <h3>{offices.location}</h3>
@@ -36,33 +42,41 @@ export default function Offices({ offices }) {
 
 
 
-// import axios from "axios";
-// import React from "react"
+// export default function Offices({ offices }) {
 
-// export default function Offices (props) {
-//     const displayOutput = ([])
+//   let navigate = useNavigate();
+//   // const [displayOutput, setDisplayOutput] = useState([]);
+//   const showDoctors = (id) => {navigate(`/doctors/${id}`);
+//   };
 
-//     axios
-//   .get("https://localhost:8000/offices/")
-//   .then((response) => {
-//     displayOutput(response);
-//   })
-//   .catch((err) => console.log(err));
-    
-    
-//         return (
-//             <div>
-//             <header> Offices </header>
-//             {props.offices.map((offices, id) => (
-//                 <div key={id}>
-//                     <div>
-//                     <h2>{offices.name}</h2>
-//                     </div>
-//                 </div>
-//             ))}
-//             </div>
-//         )
-//     }
+//   useEffect(() => {
+//     axios.get("https://localhost:8000/offices/")
+//       .then((response) => {
+//         // displayOutput(response);
+//       })
+//       .catch((err) => console.log(err));
+//   }, []);
+
+
+//   return (
+//     <div>
+//       {offices && offices.map((offices, id) => (
+//         <div key={id}>
+//           <div onClick={() => {
+//               showDoctors(id);
+//             }}
+//             className="office-container">
+//             <img className="office-image" src={offices.photo_url} />
+//             <h2>{offices.name}</h2>
+//             <h3>{offices.location}</h3>
+//             <h4>{offices.number}</h4>
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
 
 
 

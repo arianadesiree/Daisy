@@ -31,7 +31,7 @@ function App () {
     getDoctors()
   }, [])
 
-
+ 
   return (
    <>
     <Nav />
