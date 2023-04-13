@@ -10,28 +10,28 @@ export default function Offices({ offices }) {
   const [ doctors, setDoctors ] = useState(null)
   let navigate = useNavigate();
 
-  const showOffices = (id) => {
+  const showDoctors = (id) => {
     navigate(`${id}`);
   };
 
   return (
     <div>
       <Routes>
-      <Route path="/doctors" element={<DoctorsPage
+      <Route path="/doctors/:id" element={<DoctorsPage
       offices={offices}
       doctors={doctors}/>} />
       </Routes>
 
-      {offices && offices.map((offices, id) => (
-        <div key={id}>
+      {offices && offices.map((office, i) => (
+        <div key={i}>
           <div onClick={() => {
-              showOffices(id);
+              showDoctors(office.id);
             }}
             className="office-container">
-            <img className="office-image" src={offices.photo_url} />
-            <h2>{offices.name}</h2>
-            <h3>{offices.location}</h3>
-            <h4>{offices.number}</h4>
+            <img className="office-image" src={office.photo_url} />
+            <h2>{office.name}</h2>
+            <h3>{office.location}</h3>
+            <h4>{office.number}</h4>
           </div>
         </div>
       ))}

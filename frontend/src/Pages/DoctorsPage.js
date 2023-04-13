@@ -4,44 +4,53 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 
-export default function DoctorsPage () {
+export default function DoctorsPage ({doctors ,offices}) {
 
-    const [offices, setOffices] = useState(null);
-    const [doctors, setDoctors] = useState(null);
+    // const [offices, setOffices] = useState(null);
+    // const [doctors, setDoctors] = useState(null);
     const [officeDoctors, setOfficeDoctors] = useState(null);
 
     let { id } = useParams();
     let navigate = useNavigate();
-    const showDoctors = (id) => {
-      navigate(`/doctors/${id}`)
+
+    const showDoctors = (doctors) => {
+      navigate(`${offices.id}`)
     }
+    // useEffect(() => {
+    //   let selectedOffices = offices[id];
+    //   setOffices(selectedOffices);
+    // }, []);
+
     useEffect(() => {
-      let selectedOffices = offices[id];
-      setOffices(selectedOffices);
-    }, []);
-  
-    useEffect(() => {
-      setOfficeDoctors([]);
-      const getOfficeDoctors = async () => {
-        for (let i = 0; i < offices.doctors.length; i++) {
-          const res = await axios.get(offices.doctors[i]);
-          let events = officeDoctors;
-          console.log(doctors);
-          events.push(res.data);
-          console.log(doctors);
-          setOfficeDoctors([...doctors]);
-        }
-      };
-      getOfficeDoctors();
-    }, [doctors]);
+      let officeDoctors = doctors.find(
+        (doctors) => doctors.id === parseInt(id)
+        )
+        setOfficeDoctors(officeDoctors)
+      }, [doctors, id]);
 
 
-    return doctors && officeDoctors ? (
+    // useEffect(() => {
+    //   setOfficeDoctors([]);
+    //   const getOfficeDoctors = async () => {
+    //     for (let i = 0; i < offices.doctors.length; i++) {
+    //       const res = await axios.get(offices.doctors[i]);
+    //       let events = officeDoctors;
+    //       console.log(doctors);
+    //       events.push(res.data);
+    //       console.log(doctors);
+    //       setOfficeDoctors([...doctors]);
+    //     }
+    //   };
+    //   getOfficeDoctors();
+    // }, [doctors]);
+
+
+    return doctors ? (
         <section className="office-doctors">
-        {officeDoctors ? (
+        {doctors ? (
           <div>
             {" "}
-            {officeDoctors.map((doctors) => {
+            {doctors.map((doctors) => {
               return (
                 <div className="office-doctor-card">
                 <div onClick={()=>{showDoctors(doctors.id)}}className="office-doctor-rows">

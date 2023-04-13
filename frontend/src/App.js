@@ -6,6 +6,7 @@ import Doctors from "./Pages/Doctors";
 import {Route, Routes} from "react-router-dom";
 import axios from "axios";
 import React, { useState, useEffect } from 'react'
+import DoctorsPage from "./Pages/DoctorsPage";
 
 
 function App () {
@@ -46,6 +47,10 @@ function App () {
       <Route path="/doctors" element={<Doctors
       doctors={doctors}
       offices={offices}/>} />
+
+      <Route path="/offices/:id" element={<DoctorsPage
+      doctors={doctors}
+      offices={offices} />} />
 
     </Routes>
     </div>
