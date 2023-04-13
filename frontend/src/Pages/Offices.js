@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import DoctorsPage from "./DoctorsPage";
+import DoctorsPage from "./OfficeDetails";
 import {Route, Routes} from 'react-router-dom'
 
 export default function Offices({ offices }) {

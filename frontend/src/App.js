@@ -6,7 +6,8 @@ import Doctors from "./Pages/Doctors";
 import {Route, Routes} from "react-router-dom";
 import axios from "axios";
 import React, { useState, useEffect } from 'react'
-import DoctorsPage from "./Pages/DoctorsPage";
+import OfficeDetails from "./Pages/OfficeDetails";
+import DoctorDetails from "./Pages/DoctorDetails";
 
 
 function App () {
@@ -48,7 +49,11 @@ function App () {
       doctors={doctors}
       offices={offices}/>} />
 
-      <Route path="/offices/:id" element={<DoctorsPage
+      <Route path="/offices/:id" element={<OfficeDetails
+      doctors={doctors}
+      offices={offices} />} />
+
+      <Route path="/doctors/:id" element={<DoctorDetails
       doctors={doctors}
       offices={offices} />} />
 

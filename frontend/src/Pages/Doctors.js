@@ -15,10 +15,10 @@ export default function Doctors({ doctors }) {
 
   return (
     <div>
-      {doctors && doctors.map((doctors, id) => (
-        <div key={id}>
+      {doctors && doctors.map((doctors, i) => (
+        <div key={i}>
           <div onClick={() => {
-              showDoctors(id);
+              showDoctors(doctors.id);
             }} className="doctor-container">
             <img className="doctor-image" src={doctors.image_url} />
             <h2>{doctors.name}</h2>

@@ -2,8 +2,8 @@ from rest_framework import serializers
 from .models import Office, Doctor, Appointment
 
 class OfficeSerializer(serializers.HyperlinkedModelSerializer):
-    doctors = serializers.HyperlinkedRelatedField(
-        view_name='doctor_detail',
+    doctors = serializers.PrimaryKeyRelatedField(
+        # view_name='doctor_detail',
         many=True,
         read_only=True
     )
@@ -14,8 +14,8 @@ class OfficeSerializer(serializers.HyperlinkedModelSerializer):
 
     
 class DoctorSerializer(serializers.HyperlinkedModelSerializer):
-    office = serializers.HyperlinkedRelatedField(
-        view_name='office_detail',
+    office = OfficeSerializer(
+        # view_name='office_detail',
         read_only=True
     )
 
