@@ -21,7 +21,7 @@ export default function OfficeDetails ({doctors ,offices}) {
         )
         setOfficeDoctors(array)
       }, [doctors, id]);
-
+  
 
     return doctors ? (
         <section className="office-doctors">
@@ -30,15 +30,16 @@ export default function OfficeDetails ({doctors ,offices}) {
             {" "}
             {officeDoctors.map((doctors) => {
               return (
-                <div key={doctors.id} className="office-doctor-card">
-                <div onClick={()=>{showDoctors(doctors.id)}}className="office-doctor-rows">
-                   <div className="div-image">
-                    <img className="office-doctor-img" src={doctors.image_url} />
-                  </div>
-                  <p>{doctors.name}</p>
-                  <p>{doctors.location}</p>
-                  <p>{doctors.description}</p>
-
+                <div key={doctors.id}>
+                <div onClick={()=>{showDoctors(doctors.id)}}>
+                   <div class="m-6 py-8 px-2 max-w-3xl max-h-72 mx-auto bg-white rounded-xl shadow-2xl  shadow-pink-500/40 space-y-2 sm:py-5 sm:flex sm:items-center sm:space-y-0 sm:space-x-5 flex items-center space-x-3">
+                    <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src={doctors.image_url} />
+                  
+                  <p class="text-md text-black font-semibold">{doctors.name}</p>
+                  <p class="text-slate-500 font-small">{doctors.location}</p>
+                  {/* <p class="text-black font-medium">{doctors.description}</p> */}
+                  <button class="px-4 py-1 text-sm text-black bg-white border-black font-semibold rounded-full border border-purple-200 hover:text-gray-500 hover:bg-pink-200 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">More Information</button>
+                </div>
 
                 </div>
                 </div>

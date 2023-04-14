@@ -37,9 +37,15 @@ function App () {
   return (
    <>
     <Nav />
-    <div className="nav-container">
+    <div>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home
+      offices={offices}
+      doctors={doctors}/>} />
+
+      <Route path="/:id" element={<OfficeDetails
+      doctors={doctors}
+      offices={offices} />} />
 
       <Route path="/offices" element={<Offices
       offices={offices}
