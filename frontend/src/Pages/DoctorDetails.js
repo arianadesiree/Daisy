@@ -9,7 +9,7 @@ export default function DoctorDetails ({doctor}) {
 
     let { id } = useParams();
     let navigate = useNavigate();
-
+ 
       useEffect(() => {
         // Fetch details of the doctor with the given id
         const fetchDoctorDetails = async () => {
