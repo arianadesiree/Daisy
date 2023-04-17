@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import newquote from "../assets/newquote.png";
+// import newquote from "../assets/newquote.png";
 import { useNavigate } from "react-router-dom";
-import Nav from "./Nav";
 import logo from "../assets/logo.png";
 
  

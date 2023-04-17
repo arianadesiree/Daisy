@@ -1,4 +1,3 @@
-// import axios from "axios";
 import {useNavigate} from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -37,7 +36,6 @@ export default function OfficeDetails ({doctors ,offices}) {
                   
                   <p class="text-md text-black font-semibold">{doctors.name}</p>
                   <p class="text-slate-500 font-small">{doctors.location}</p>
-                  {/* <p class="text-black font-medium">{doctors.description}</p> */}
                   <button class="px-4 py-1 text-sm text-black bg-white border-black font-semibold rounded-full border border-purple-200 hover:text-gray-500 hover:bg-pink-200 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">More Information</button>
                 </div>
 

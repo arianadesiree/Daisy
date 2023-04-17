@@ -1,8 +1,4 @@
 import { Link } from "react-router-dom";
-// import logo from "../assets/logo.png";
-import Home from "./Home";
-
-
 
 export default function Nav() {
 

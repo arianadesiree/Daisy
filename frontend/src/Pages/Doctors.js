@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +10,6 @@ export default function Doctors({ doctors }) {
   const showDoctors = (id) => {
     navigate(`${id}`);
   };
-
 
   return (
     <div>
