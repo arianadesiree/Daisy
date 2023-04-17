@@ -13,6 +13,7 @@ Ariana J. | [LinkedIn](https://www.linkedin.com/in/arianadjackson/)
 ## Future Updates
 - Auth to create a user who can then book and leave star reviews for the doctor they have visited before.
 - More work on the styling to make it more modern and sleek.
+- Be fully deployed
 - Add more doctors and eventually be able to have an API for doctors in Texas created
 
 ## Final Product
