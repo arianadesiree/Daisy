@@ -24,7 +24,7 @@ export default function OfficeDetails ({doctors ,offices}) {
   
 
     return doctors ? (
-        <section className="office-doctors">
+        <section class="bg-neutral-500 h-screen">
         {officeDoctors ? (
           <div>
             {" "}
@@ -32,7 +32,7 @@ export default function OfficeDetails ({doctors ,offices}) {
               return (
                 <div key={doctors.id}>
                 <div onClick={()=>{showDoctors(doctors.id)}}>
-                   <div class="m-6 py-8 px-2 max-w-3xl max-h-72 mx-auto bg-white rounded-xl shadow-2xl  shadow-pink-500/40 space-y-2 sm:py-5 sm:flex sm:items-center sm:space-y-0 sm:space-x-5 flex items-center space-x-3">
+                   <div class="mb-7 py-8 px-2 max-w-3xl max-h-60 mx-auto bg-white rounded-xl shadow-2xl  shadow-pink-500/40 space-y-2 sm:py-5 sm:flex sm:items-center sm:space-y-0 sm:space-x-5 flex items-center space-x-3">
                     <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src={doctors.image_url} />
                   
                   <p class="text-md text-black font-semibold">{doctors.name}</p>

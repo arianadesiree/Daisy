@@ -37,7 +37,7 @@ function App () {
   return (
    <>
     <Nav />
-    <div>
+    <div class="bg-neutral-500 max-h-full">
     <Routes>
       <Route path="/" element={<Home
       offices={offices}

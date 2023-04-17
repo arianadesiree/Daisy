@@ -4,6 +4,8 @@ import axios from "axios";
 import newquote from "../assets/newquote.png";
 import { useNavigate } from "react-router-dom";
 import Nav from "./Nav";
+import logo from "../assets/logo.png";
+
  
 const Home = ({offices}) => {
 
@@ -45,9 +47,9 @@ const Home = ({offices}) => {
       };
  
         return (
-          
-          <div>
-               {/* <img class="flex items-center" src={newquote}/> */}
+      
+          <div class="bg-neutral-500 mx-auto h-screen">
+            <img class="w-64 ml-32 justify-self-center" src={logo}/>
                 <form class="flex justify-center" onSubmit={handleSubmit}>
               <label class="my-7">
                 Search by Specialty:
@@ -67,9 +69,9 @@ const Home = ({offices}) => {
                 <div onClick={() => {
               showDoctors(result.id);
             }}>
-              <div class="m-6 py-8 px-2 max-w-3xl mx-auto bg-white rounded-xl shadow-2xl  shadow-pink-500/40 space-y-2 sm:py-5 sm:flex sm:items-center sm:space-y-0 sm:space-x-5 flex items-center space-x-3">
+              <div class="mb-6 py-8 px-2 max-w-3xl mx-auto bg-white rounded-xl shadow-2xl  shadow-pink-500/40 space-y-2 sm:py-5 sm:flex sm:items-center sm:space-y-0 sm:space-x-5 flex items-center space-x-3">
                 <h2 class="text-md text-black font-semibold">{result.name}</h2>
-                <p class="text-slate-500 font-small">Specialty: {result.specialty}</p>
+                <p class="text-slate-500 font-small font-serif">Specialty: {result.specialty}</p>
                 <p class="text-slate-500 font-small">{result.location}</p>
                 <button class="px-4 py-1 text-sm text-black bg-white border-black font-semibold rounded-full border border-purple-200 hover:text-gray-500 hover:bg-pink-200 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Go To Doctors</button>
               </div>

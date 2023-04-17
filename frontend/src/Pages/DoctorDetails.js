@@ -20,21 +20,24 @@ export default function DoctorDetails ({doctor}) {
         };
         fetchDoctorDetails();
     }, [id]);
-
+  
     return doctorDetails ? (
+      <div class="bg-neutral-500 h-screen">
                 <div key={doctorDetails.id} className="office-doctor-card">
-                <div className="office-doctor-rows">
+                <div class="max-h-full px-14 max-w-6xl mx-auto bg-white rounded-xl shadow-2xl  shadow-pink-500/40 sm:py-14 sm:flex sm:items-center sm:space-x-1 flex-wrap">
                    <div className="div-image">
-                    <img className="office-doctor-img" src={doctorDetails.image_url} />
+                    <img class="block h-80 rounded-full sm:mx-0 sm:shrink-0" src={doctorDetails.image_url} />
                   </div>
-                  <p>{doctorDetails.name}</p>
-                  <p>{doctorDetails.location}</p>
-                  <p>{doctorDetails.office.number}</p>
-                  <p>Office specialization: {doctorDetails.office.specialty}</p>
-                  <p>{doctorDetails.description}</p>
-                  <button class="px-4 py-1 text-sm text-black bg-white border-black font-semibold rounded-full border border-purple-200 hover:text-gray-500 hover:bg-pink-200 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Contact Now</button>
+                  <p class="px-20 text-lg text-black font-semibold">{doctorDetails.name}</p>
+                  <p class="text-slate-500 font-small">{doctorDetails.location}</p>
+                  <p class="text-slate-500 font-medium">{doctorDetails.office.number}</p>
+                  <p class="px-52 text-md text-black font-semibold">Office specialization: {doctorDetails.office.specialty}</p>
+                  <p class="pt-6 pb-6 px-52 text-md text-black font-semibold">{doctorDetails.description}</p>
+                  <div class="px-96 mx-10">
+                  <button class="px-8 py-3 text-sm text-black bg-white border-black font-bold italic rounded-full border border-purple-200 hover:text-gray-500 hover:bg-pink-200 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Contact Now</button>
+                  </div>
 
-
+                </div>
                 </div>
                 </div>
        ) : (
