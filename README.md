@@ -11,7 +11,7 @@ Ariana J. | [LinkedIn](https://www.linkedin.com/in/arianadjackson/)
 <img width="1172" height="325" alt="Wireframe" src="https://user-images.githubusercontent.com/22970290/230627359-093c7cc4-a375-49c2-b75a-eb86b4b94b4f.png">
 
 ## Future Updates
-- Auth to create a user who can then book and leave star reviews for the doctor they have visited before.
+- Auth to create a user who can then book and leave 1 to 5 star reviews for the doctor they have visited before.
 - More work on the styling to make it more modern and sleek.
 - Be fully deployed
 - Add more doctors and eventually be able to have an API for doctors in Texas created
