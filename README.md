@@ -1,5 +1,5 @@
 # Daisy
-Daisy is a full-stack application made for the convenience of all women based in major cities in Texas. This application will allow you to search for a major city in Texas and will populate certain offices in that city. From there you may pick an office and Then you will get a list of Doctors whom which you can contact to book an appointment. All of the doctors apart of this application will be apart of some specialization with Obstetrics and Gynecology creating a one stop shop for women in Texas to find a Doctor. This app will be made with Django, Python, React, HTML, and CSS.
+Daisy is a full-stack application made for the convenience of all women based in major cities in Texas. This application will allow you to search for a major city in Texas and will populate certain offices in that city. From there you may pick an office and Then you will get a list of Doctors whom which you can contact to book an appointment. All of the doctors apart of this application will be apart of some specialization with Obstetrics and Gynecology creating a one stop shop for women in Texas to find a Doctor. This app will be made with Django, Python, React, HTML, and Tailwind CSS.
 ## Contributor
 Ariana J. | [LinkedIn](https://www.linkedin.com/in/arianadjackson/)
 
