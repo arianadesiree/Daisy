@@ -8,6 +8,7 @@ import axios from "axios";
 import React, { useState, useEffect } from 'react'
 import OfficeDetails from "./Pages/OfficeDetails";
 import DoctorDetails from "./Pages/DoctorDetails";
+import Appointment from "./Pages/Appointment";
 
 
 function App () {
@@ -60,6 +61,10 @@ function App () {
       offices={offices} />} />
 
       <Route path="/doctors/:id" element={<DoctorDetails
+      doctors={doctors}
+      offices={offices} />} />
+
+      <Route path="/make-an-appointment" element={<Appointment
       doctors={doctors}
       offices={offices} />} />
 

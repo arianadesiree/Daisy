@@ -20,10 +20,17 @@ export default function DoctorDetails ({doctor}) {
         };
         fetchDoctorDetails();
     }, [id]);
+
+    const makeAppointment = (id) => {
+      navigate(`/make-an-appointment`)
+    }
   
     return doctorDetails ? (
       <div class="bg-neutral-500 h-screen">
                 <div key={doctorDetails.id} className="office-doctor-card">
+                <div onClick={() => {
+                makeAppointment(doctorDetails.id);
+                  }}>
                 <div class="max-h-full px-14 max-w-6xl mx-auto bg-white rounded-xl shadow-2xl  shadow-pink-500/40 sm:py-14 sm:flex sm:items-center sm:space-x-1 flex-wrap">
                    <div className="div-image">
                     <img class="block h-80 rounded-full sm:mx-0 sm:shrink-0" src={doctorDetails.image_url} />
@@ -36,7 +43,7 @@ export default function DoctorDetails ({doctor}) {
                   <div class="px-96 mx-10">
                   <button class="px-8 py-3 text-sm text-black bg-white border-black font-bold italic rounded-full border border-purple-200 hover:text-gray-500 hover:bg-pink-200 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Contact Now</button>
                   </div>
-
+              </div>
                 </div>
                 </div>
                 </div>
