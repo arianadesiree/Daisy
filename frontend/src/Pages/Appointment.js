@@ -11,7 +11,7 @@ export default function Appointment() {
     name: '',
     email: '',
     phone: '',
-    reasonForVisit: ''
+    visit: ''
   })
 
   const handleChange = (e) => {
@@ -47,10 +47,10 @@ export default function Appointment() {
           />
         </div>
         <div>
-          <label htmlFor="number" class="block mb-2 text-md font-medium text-gray-900 dark:text-white"> Phone Number </label>
+          <label htmlFor="phone" class="block mb-2 text-md font-medium text-gray-900 dark:text-white"> Phone Number </label>
           <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             onChange={handleChange}
-            name="number"
+            name="phone"
             type="text"
             placeholder="xxx xxx xxxx"
             value={formValues.phone}
@@ -64,7 +64,7 @@ export default function Appointment() {
             name="visit"
             type="text"
             placeholder=" ..."
-            value={formValues.reasonForVisit}
+            value={formValues.visit}
             required
           />
         </div>

@@ -2,7 +2,7 @@ import {useNavigate} from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-
+ 
 export default function OfficeDetails ({doctors ,offices}) {
 
     const [officeDoctors, setOfficeDoctors] = useState(null);
