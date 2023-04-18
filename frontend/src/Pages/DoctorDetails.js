@@ -33,6 +33,11 @@ export default function DoctorDetails ({doctor}) {
         window.location.reload();
       });
     };
+
+    // function Doctor({ officeNumber }) {
+    //   if (!officeNumber) {
+    //     return 0;
+    //   }
   
     return doctorDetails ? (
       <div class="bg-neutral-500 h-screen">
@@ -46,8 +51,8 @@ export default function DoctorDetails ({doctor}) {
                   </div>
                   <p class="px-20 text-lg text-black font-semibold">{doctorDetails.name}</p>
                   <p class="text-slate-500 font-small">{doctorDetails.location}</p>
-                  <p class="text-slate-500 font-medium">{doctorDetails.office.number}</p>
-                  <p class="px-52 text-md text-black font-semibold">Office specialization: {doctorDetails.office.specialty}</p>
+                  <p class="text-slate-500 font-medium">{doctorDetails.office && doctorDetails.office.number ? doctorDetails.office.number : 0}</p>
+                  <p class="px-52 text-md text-black font-semibold">Office specialization: {doctorDetails.office && doctorDetails.office.specialty ? doctorDetails.office.specialty : 0}</p>
                   <p class="pt-6 pb-6 px-52 text-md text-black font-semibold">{doctorDetails.description}</p>
                   <div class="px-96 mx-10">
                   <button class="px-8 py-3 text-sm text-black bg-white border-black font-bold italic rounded-full border border-purple-200 hover:text-gray-500 hover:bg-pink-200 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Contact Now</button>
