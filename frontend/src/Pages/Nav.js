@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import CreateDoctor from "./CreateDoctor";
 
 export default function Nav() {
+    const location = useLocation();
 
     return (
         <div class="bg-neutral-500 px-28 py-5">
@@ -17,8 +19,13 @@ export default function Nav() {
                 <li class="text-white  hover:text-pink-300 list-none inline-block px-5"> 
                     <Link to="/doctors"> Doctors </Link>
                 </li>
+
+                <li class="text-white hover:text-pink-300 list-none inline-block px-5">
+                     <Link to="/createdoctor"> Add A Doctor </Link>
+                </li>
             </ul>
         </nav>
+        {location.pathname === "/createdoctor"}
     </div>
 
     );

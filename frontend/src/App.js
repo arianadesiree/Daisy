@@ -9,7 +9,8 @@ import React, { useState, useEffect } from 'react'
 import OfficeDetails from "./Pages/OfficeDetails";
 import DoctorDetails from "./Pages/DoctorDetails";
 import Appointment from "./Pages/Appointment";
-import DoctorContext from "./Pages/DoctorContext";
+import CreateDoctor from "./Pages/CreateDoctor";
+import UpdateDoctor from "./Pages/UpdateDoctor";
 
 
 function App () {
@@ -69,9 +70,13 @@ function App () {
       doctors={doctors}
       offices={offices} />} />
 
-      {/* <Route path="/make-an-appointment" element={<DoctorContext
+      <Route path="/createdoctor" element={<CreateDoctor
       doctors={doctors}
-      offices={offices} />} /> */}
+      offices={offices} />} />
+
+      <Route path="/updatedoctor/:id" element={<UpdateDoctor
+      doctors={doctors}
+      offices={offices} />} />
 
     </Routes>
     </div>

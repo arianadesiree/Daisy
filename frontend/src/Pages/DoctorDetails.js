@@ -2,6 +2,7 @@ import {useNavigate} from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from 'axios';
+import Client from "../services/api";
 
 export default function DoctorDetails ({doctor}) {
 
@@ -24,6 +25,14 @@ export default function DoctorDetails ({doctor}) {
     const makeAppointment = (id) => {
       navigate(`/make-an-appointment`)
     }
+
+    const handleDeleteDoctor = () => {
+      console.log(`deleted Doctor ${id}`);
+      Client.delete(`/doctors/${id}`).then(() => {
+        navigate(`/doctors`);
+        window.location.reload();
+      });
+    };
   
     return doctorDetails ? (
       <div class="bg-neutral-500 h-screen">
@@ -42,6 +51,7 @@ export default function DoctorDetails ({doctor}) {
                   <p class="pt-6 pb-6 px-52 text-md text-black font-semibold">{doctorDetails.description}</p>
                   <div class="px-96 mx-10">
                   <button class="px-8 py-3 text-sm text-black bg-white border-black font-bold italic rounded-full border border-purple-200 hover:text-gray-500 hover:bg-pink-200 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Contact Now</button>
+                  <button onClick={handleDeleteDoctor} class="px-8 py-1 text-sm text-red-500 bg-white border-black font-semibold rounded-full border border-purple-200 hover:text-gray-500 hover:bg-pink-200 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Delete Doctor</button>
                   </div>
               </div>
                 </div>

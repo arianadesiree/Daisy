@@ -14,7 +14,7 @@ class Office(models.Model):
 
 
 class Doctor(models.Model):
-    office = models.ForeignKey(Office, on_delete=models.CASCADE, related_name='doctors')
+    office = models.ForeignKey(Office, null=True, on_delete=models.CASCADE, related_name='doctors')
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
     gender = models.CharField(max_length=30)
