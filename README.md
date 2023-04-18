@@ -1,5 +1,5 @@
 # Daisy
-Daisy is a full-stack application made for the convenience of all women based in Houston, Texas. This application will allow you to search in Houston, and will populate certain offices in the city by specialty. From there you may pick an office and Then you will get a list of Doctors whom which you can contact to book an appointment. All of the doctors apart of this application will be apart of some specialization with Obstetrics and Gynecology creating a one stop shop for women in Texas to find a Doctor. This app will be made with Django, Python, React, HTML, and Tailwind CSS.
+Daisy is a full-stack application made for the convenience of all women based in Houston, Texas. This application will allow you to search in Houston, and will populate certain offices in the city by specialty. From there you may pick an office and Then you will get a list of Doctors whom which you can contact to book an appointment. All of the doctors apart of this application will be apart of some specialization with Obstetrics and Gynecology creating a one stop shop for women in Texas to find a Doctor. This app will be made with Django, Python, React, HTML, and Tailwind CSS. This site also has full CRUD on the Doctors model.
 
 ## Contributor
 Ariana J. | [LinkedIn](https://www.linkedin.com/in/arianadjackson/)
@@ -10,8 +10,7 @@ Ariana J. | [LinkedIn](https://www.linkedin.com/in/arianadjackson/)
 ## Wireframe
 <img width="1172" height="325" alt="Wireframe" src="https://user-images.githubusercontent.com/22970290/230627359-093c7cc4-a375-49c2-b75a-eb86b4b94b4f.png">
 
-## Future Updates
-- Full front-end CRUD on the doctor model
+## Future Update
 - Auth to create a user who can then book and leave 1 to 5 star reviews for the doctor they have visited before.
 - More work on the styling to make it more modern and sleek.
 - Be fully deployed
